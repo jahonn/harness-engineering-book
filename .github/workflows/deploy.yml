@@ -30,6 +30,8 @@ jobs:
         run: npm install
       - name: Build with VitePress
         run: npm run docs:build
+      - name: Add Pages marker
+        run: touch .vitepress/dist/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
